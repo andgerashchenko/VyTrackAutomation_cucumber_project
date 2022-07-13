@@ -34,6 +34,21 @@ public class BasePage {
     public WebElement SystemModule;
 
     @FindBy(xpath = "//a/span[.='Contacts']")
+    public WebElement Contacts;
+
+    @FindBy(xpath = "//div[contains(@class, 'alert alert-error fade')]/div")
+    public WebElement AlertMessage;
+
+    @FindBy(xpath = "//span[.='Vehicle Contracts']")
     public WebElement Contracts;
+
+    @FindBy(xpath = "//li[@id='user-menu']/a")
+    public WebElement UserMenu;
+
+    @FindBy(linkText = "Logout")
+    public WebElement LogoutBtn;
+
+    @FindBy(xpath = "//button[@class='close']")
+    public WebElement CloseAlert;
 
 }
