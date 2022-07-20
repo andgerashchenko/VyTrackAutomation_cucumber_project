@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
     public BasePage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(),this );
     }
     @FindBy(xpath = "//a[@class='unclickable']//span[contains(text(), 'Dashboards')]")
     public WebElement DashboardModule;
@@ -50,5 +50,12 @@ public class BasePage {
 
     @FindBy(xpath = "//button[@class='close']")
     public WebElement CloseAlert;
+
+    @FindBy(xpath = "//span[.='Vehicle Services Logs']")
+    public WebElement fleetVehicleServiceLog;
+
+    @FindBy(xpath = "//h1[.='VehicleServicesLogs']")
+    public WebElement fleetVehicleServiceLogHeader;
+
 
 }
