@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
     public BasePage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(),this );
     }
     @FindBy(xpath = "//a[@class='unclickable']//span[contains(text(), 'Dashboards')]")
     public WebElement DashboardModule;
