@@ -2,7 +2,6 @@ package com.cydeo.step_definitions;
 
 import com.cydeo.pages.BasePage;
 import com.cydeo.pages.LoginPage;
-import com.cydeo.pages.VehicleServicePage;
 import com.cydeo.utilities.ConfigReader;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -15,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class UserStory11StepDef extends LoginPage {
     BasePage basePage = new BasePage();
-    VehicleServicePage vehicleServicePage = new VehicleServicePage();
+
 
     @Given("as a authorized user on login page")
     public void as_a_authorized_user_on_login_page() {
@@ -35,7 +34,7 @@ public class UserStory11StepDef extends LoginPage {
     @When("user clicks Vehicle Service Log dropdown")
     public void user_clicks_vehicle_service_log_dropdown() {
         Actions actions = new Actions(Driver.getDriver());
-        actions.moveToElement(basePage.FleetModule).click(vehicleServicePage.fleetVehicleServiceLog).perform();
+        actions.moveToElement(basePage.FleetModule).click(basePage.fleetVehicleServiceLog).perform();
 //        WebDriverWait webDriverWait = new WebDriverWait(Driver.getDriver(),10);
 //        webDriverWait(ExpectedConditions.visibilityOf())
     }

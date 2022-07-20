@@ -51,4 +51,11 @@ public class BasePage {
     @FindBy(xpath = "//button[@class='close']")
     public WebElement CloseAlert;
 
+    @FindBy(xpath = "//span[.='Vehicle Services Logs']")
+    public WebElement fleetVehicleServiceLog;
+
+    @FindBy(xpath = "//h1[.='VehicleServicesLogs']")
+    public WebElement fleetVehicleServiceLogHeader;
+
+
 }
